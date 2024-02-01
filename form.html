@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP FORM BY ARKA</title>
+    <link rel="stylesheet" type="text/css" href="form_style.css" />
+  </head>
+  <body>
+    <form action="form_action.php" method="post" enctype="multipart/form-data">
+      Email: <input type="email" name="email" required /><br />
+      <div class="group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number, 
+        one uppercase and lowercase letter, and at least 8 characters"
+          required
+        />
+
+        <div id="password-message">
+          <h3>Password must contain:</h3>
+          <p class="password-message-item invalid">
+            At least
+            <b>one lowercase letter</b>
+          </p>
+          <p class="password-message-item invalid">
+            At least
+            <b>one uppercase letter</b>
+          </p>
+          <p class="password-message-item invalid">
+            At least
+            <b>one number</b>
+          </p>
+          <p class="password-message-item invalid">
+            Minimum
+            <b>8 characters</b>
+          </p>
+        </div>
+        <label for=""> Strength of password </label>
+        <div class="power-container">
+          <div id="power-point"></div>
+        </div>
+      </div>
+      <!-- Password: <input type="password" name="password" id="password" required><br> -->
+      Confirm Password:
+      <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" required /><br />
+      Checkbox: <input type="checkbox" name="checkbox" /><br />
+      Radio:
+      <input type="radio" name="radio" value="option1" checked /> Option 1
+      <input type="radio" name="radio" value="option2" /> Option 2<br />
+      Image: <input type="file" name="image" accept="image/*" /><br />
+      <input type="submit" value="Submit" onclick="return Validate()" />
+    </form>
+  </body>
+  <script src="password_validation.js"></script>
+  <script src="password_Strength.js"></script>
+  <script src="confirmPassword_match.js"></script>
+</html>

@@ -1,0 +1,84 @@
+/* Style.css File */
+* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+} 
+/* The message box */
+#password-message { 
+	display: none; 
+	background: #ffffff; 
+	color: #000; 
+	position: relative; 
+	padding: 20px; 
+	margin-top: 10px; 
+	text-align: left; 
+} 
+
+#password-message h3 { 
+	font-size: 15px; 
+	margin-top: 0; 
+	text-transform: uppercase; 
+} 
+
+#password-message p { 
+	margin: 8px 0; 
+} 
+
+.valid { 
+	color: green; 
+} 
+
+.valid:before { 
+	position: relative; 
+	left: -35px; 
+	content: ""; 
+} 
+
+.invalid { 
+	color: red; 
+} 
+
+.invalid:before { 
+	position: relative; 
+	left: -35px; 
+	content: ""; 
+} 
+
+/* Error message style */
+.error-msg { 
+	color: red; 
+	font-size: 14px; 
+	margin-top: 4px; 
+}
+
+
+
+/* Styling the container */
+.container { 
+	margin: 0 auto; 
+	padding: 20px; 
+	max-width: 400px; 
+	background-color: #ffffff; 
+} 
+
+/* Style all input fields */
+input { 
+	width: 100%; 
+	padding: 12px; 
+	margin: 6px 0 16px 0; 
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+} 
+
+/* Style the submit button */
+input[type=submit] { 
+	background-color: #0f0fe9; 
+	color: white; 
+	cursor: pointer; 
+} 
+
+input[type=submit]:hover { 
+	background-color: #4141fc; 
+} 
+
